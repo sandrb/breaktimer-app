@@ -105,6 +105,7 @@ export function buildTray(): void {
       label: breaksEnabled ? "Disable" : "Enable",
       click: setBreaksEnabled.bind(null, !breaksEnabled),
     },
+    { label: "Disable for...", click: createSettingsWindow },
     {
       label: "Start break now",
       visible: breakTime !== null && inWorkingHours,
