@@ -446,6 +446,26 @@ export default function SettingsEl() {
             }
           />
           <Tab
+            id="temp-disable"
+            title="Disable temporarily"
+            panel={
+              <React.Fragment>
+                <FormGroup>
+                  <Switch
+                    label="Disable temporarily"
+                    checked={settingsDraft.disableTemp}
+                    onChange={handleSwitchChange.bind(
+                      null,
+                      "workingHoursEnabled"
+                    )}
+                    disabled={!settingsDraft.disableTemp}
+                  />
+                  // todo: add more things here
+                </FormGroup>
+              </React.Fragment>
+            }
+          />
+          <Tab
             id="idle-reset"
             title="Idle Reset"
             panel={
