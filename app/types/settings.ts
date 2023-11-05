@@ -6,6 +6,7 @@ export enum NotificationType {
 export interface Settings {
   autoLaunch: boolean;
   breaksEnabled: boolean;
+  breaksDisableTemp: Date;
   notificationType: NotificationType;
   breakFrequency: Date;
   breakLength: Date;
