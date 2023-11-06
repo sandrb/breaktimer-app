@@ -11,7 +11,7 @@ import {
   Button,
   Slider,
 } from "@blueprintjs/core";
-import { TimePicker, TimePrecision } from "@blueprintjs/datetime";
+import { TimePicker, TimePrecision, DatePicker } from "@blueprintjs/datetime";
 import { Settings, NotificationType } from "../../types/settings";
 import { toast } from "../toaster";
 import SettingsHeader from "./SettingsHeader";
@@ -447,12 +447,15 @@ export default function SettingsEl() {
           />
           <Tab
             id="disable-for"
-            title="Disable for..."
+            title="Disable For..."
             panel={
               <React.Fragment>
-                <FormGroup>
-                  todo: add more things here
+                <FormGroup label="Disable for" labelInfo="(hh:mm:ss)">
+                  <DatePicker />
+                  <TimePicker precision={TimePrecision.SECOND} />
                 </FormGroup>
+                <FormGroup>Untill: </FormGroup>
+
               </React.Fragment>
             }
           />
